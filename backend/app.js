@@ -5,7 +5,7 @@ const cookieParser=require("cookie-parser")
 const bodyParser=require("body-parser")
 const fileUpload = require("express-fileupload")
 const errorMiddleware=require("./middleware/error")
-
+const path = require("path");
 //config
 if(process.env.NODE_ENV!=="PRODUCTION"){
     require("dotenv").config({path:"./backend/config/config.env"})

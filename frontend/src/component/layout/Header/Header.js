@@ -9,7 +9,7 @@ const Header = () => {
     <ReactNavbar
     burgerColorHover="#eb4034"
     logo={logo}
-    logoWidth="20vmax"
+    logoWidth="22vmax"
     navColor1="white"
     logoHoverSize="10px"
     logoHoverColor="#eb4034"

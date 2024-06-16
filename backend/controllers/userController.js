@@ -35,7 +35,7 @@ exports.registerUser= catchAsyncErrors(async(req,res,next)=>{
 //login user
 exports.loginUser= catchAsyncErrors(async(req,res,next)=>{
     const {email,password}=req.body;
-    //check if both email ans password is given
+    //check if both email and password is given
     if(!email || !password){
         return new ErrorHandler("Pleese enter email and password",400);
     }
@@ -50,7 +50,6 @@ exports.loginUser= catchAsyncErrors(async(req,res,next)=>{
     }
     // else when password is matched
     sendToken(user,200,res);
-
 })
 
 //logout user
@@ -103,7 +102,7 @@ exports.forgotPassword=catchAsyncErrors(async(req,res,next)=>{
 
 //Reset Password
 exports.resetPassword=  catchAsyncErrors(async(req,res,next)=>{
-    //  to check user exists in database ,creating token hash to copare with stored token in database 
+    //  to check user exists in database ,creating token hash to compare with stored token in database 
     const resetPasswordToken=crypto.createHash("sha256").update(req.params.token).digest("hex");
 
     const user= await User.findOne({

@@ -5,7 +5,6 @@ class Apifeatures{
     }
     search(){
         const keyword = this.queryStr.keyword?{
-
             name:{
                 $regex:this.queryStr.keyword,
                 $options:"i",
@@ -26,7 +25,7 @@ class Apifeatures{
 
         //filter for pricing and rating 
         let queryStr = JSON.stringify(querycopy);    //changing to string 
-        queryStr=queryStr.replace(/\b(gt|gte|lt|lte)\b/g,(key)=>`$${key}`);
+        queryStr=queryStr.replace(/\b(gt|gte|lt|lte)\b/g,(key)=>`$${key}`); //we are doing this bcz in mongodb $ is written before gt,gte,lt,lte
 
 
         // this.query=this.query.find(querycopy);

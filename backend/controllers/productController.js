@@ -29,7 +29,7 @@ exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
     }
 
     req.body.images=imagesLinks;
-    req.body.user=req.user.id;  //done for user 
+    req.body.user=req.user.id;  //done for user   ,while creating the product storing the id of user who created the product
     const product=await Product.create(req.body);
     res.send(201).json({
         success:true,

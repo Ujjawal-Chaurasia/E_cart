@@ -1,6 +1,7 @@
 .banner {
-  background-image: url("../../images/cover.jfif");
-  background-position: center;
+  background-image: url("../../images/ecartbg.jpg");
+  /* background-image: linear-gradient(to rigth , #635dc0, #3027ae); */
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vmin;
@@ -13,13 +14,16 @@
 }
 
 .banner > h1 {
-  margin: 5vmax;
-
-  font: 600 2.5vmax "Roboto";
+  padding-top: 2vmax;
+  margin: 1vmax;
+  font: 600 3vmax "Roboto";
+  color:white;
 }
-
 .banner > p {
-  font: 300 1.4vmax "Lucida Sans";
+  padding-top: 2vmax;
+  margin: 1vmax;
+  font: 600 1vmax "Roboto";
+  color:white;
 }
 
 .banner > a > button {
@@ -28,7 +32,7 @@
   background-color: white;
   border: 1px solid white;
   border-radius: 0;
-  padding: 1vmax;
+  padding: 1.4vmax;
   transition: all 0.5s;
   width: 9vmax;
   font: 500 1vmax "Roboto";
@@ -38,7 +42,7 @@
   color: white;
 }
 
-.banner::after {
+/* .banner::after {
   content: "";
   width: 100vw;
   height: 100vmin;
@@ -46,9 +50,9 @@
   position: absolute;
   top: 0%;
   left: 0;
-  clip-path: polygon(100% 68%, 0 100%, 100% 100%);
+  clip-path: polygon(100% 88%, 0 100%, 100% 100%);
   max-width: 100%;
-}
+} */
 
 .homeHeading {
   text-align: center;
@@ -119,10 +123,8 @@
 /* #productstarrating>div:first-child{
   width: 4vmax;
   /* overflow: hidden; */
-  /* font-size: 3px;
+/* font-size: 3px;
   box-sizing: border-box; */
-
-
 
 .productCard:hover {
   box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);

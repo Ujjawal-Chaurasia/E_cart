@@ -7,12 +7,6 @@ import {clearErrors, getProduct} from "../../actions/productAction"
 import {useSelector,useDispatch} from "react-redux"
 import Loading from "../loader/loader"
 import { useAlert } from 'react-alert';
-// const product={
-//     name:"blue t-shirt",
-//     image:[{url:"http://i.ibb.co/DRST11n/1.webp"}],
-//     price:"$99",
-//     _id:"abhishek",
-// }
 
 const Home = () => {
     const dispatch=useDispatch();
@@ -32,11 +26,12 @@ const Home = () => {
         {loading?(<Loading/>):(<Fragment>
         <MetaData title="Ecommerce"/>
         <div className="banner">
-            <p>Welcome to Ecommerce</p>
-            <h1>Find amazing Products Below</h1>
+            <h1>Welcome to Ecart</h1>
+            <h1>India's Own Ecommerce Website</h1>
+            <p>Find Amazing Products Below</p>
             <a href="#container">
                 <button>
-                    Scroll<CgMouse/>
+                   Scroll<CgMouse/>
                 </button>
             </a>
         </div>
